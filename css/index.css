@@ -1,7 +1,10 @@
 @import './iconos.css';
 @import './fonts.css';
 @import './body.css';
-@import './links.css';
+@import './link.css';
+@import './button-icon.css';
+@import './sidebar.css';
+@import './ellipsis.css';
 
 :root {
     font-size: 16px;
@@ -12,11 +15,11 @@
     --gray30: #282828;
     --gray40: #181818;
     --gray50: #121212;
-    --gray60: #000000;
+    --gray60: #000000;    
     --basefontFamily: Avenir, Helvetica, sans-serif;
-    --headline1: bold 2rem/normal var(--baseFontFamily);
-    --headline2: bold 1.5rem/1.75rem var(--basefontFamily);
-    --baseFont: normal .875rem/1.375rem var(--basefontFamily);
+    --headline1: bold 2rem/normal var(--basefontFamily);
+    --headline2: bold 1.5rem/1.75rem var(--basefontFamily);    
+    --baseFont: normal .875rem/1.375rem var(--basefontFamily);    
     --baseFontBold: bold .875rem/1.375rem var(--basefontFamily);
     --button: bold .875rem/1rem var(--basefontFamily);
     --small: normal .75em/normal var(--basefontFamily);
