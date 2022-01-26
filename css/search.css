@@ -1,0 +1,32 @@
+.search {    
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.search:focus-within i {
+    color: var(--gray30);
+}
+
+.search i {
+    position: absolute;
+    inset-inline-start: .5rem;
+    inset-block-start: calc(50% - .5rem);
+    font-size: 1rem;
+    block-size: 1rem;
+}
+
+.search input {
+    padding-inline: 2rem;
+    padding-block: .5rem;
+    max-inline-size: 22rem;
+    width: 100%;
+    border-radius: 1.375rem;
+    border: none;
+    font: var(--basefontFamily);
+    color: var(--gray30);
+}
+
+.search input::-webkit-input-placeholder {
+    color: var(--gray10);
+}
