@@ -35,7 +35,6 @@
 <body class="body">
     <div class="layout">
         <div class="layout-block">
-
             <div class="layout-sidebar">
                 <div class="sidebar">
                     <header class="logo">
@@ -46,7 +45,7 @@
                     <nav class="menu" aria-label="Principal">
                         <ul class="menu-list">
                             <li class="menuItem is-active">
-                                <a href="/" class="link" aria-current="page">
+                                <a href="#home" class="link" aria-current="page" id="btnLayoutHome">
                                     <i class="icon-home" aria-hidden="true"></i> <span>Inicio</span>
                                 </a>
                             </li>
@@ -66,13 +65,13 @@
                         <h2 class="list-title" id="library-navigation">Tu biblioteca</h2>
                         <ul class="list-content">
                             <li class="list-item">
-                                <a href="#" class="link">Creada para ti</a>
+                                <a href="#para-ti" class="link" id="btnLayoutForyou">Creada para ti</a>
                             </li>
                             <li class="list-item">
-                                <a href="#" class="link">Escuchado recientemente</a>
+                                <a href="#escuchado-recientemente" class="link" id="btnLayoutRecentlyHeard">Escuchado recientemente</a>
                             </li>
                             <li class="list-item">
-                                <a href="#" class="link">Tus Me Gusta</a>
+                                <a href="#tus-me-gusta" class="link" id="btnLayoutYourlikes">Tus Me Gusta</a>
                             </li>
                         </ul>
                     </nav>
@@ -158,10 +157,8 @@
                     </nav>
                 </div>
             </div>
-
-            <div class="layout-main">
-                <div class="page">
-                    
+            <div class="layout-main" id="layoutHome" >
+                <div class="page" >
                     <div class="sticky">
                         <div class="page-block">
                             <header class="header" aria-label="Barra superior y menú del usuario">
@@ -180,8 +177,7 @@
                             </header>
                         </div>
                     </div>
-            
-                    <main class="page-block">
+                    <main class="page-block" >
                         <section class="playlistList" aria-labelledby="region1">
                             <div class="playlistList-top">
                                 <h2 class="playlistList-title" id="region1">Buenas noches</h2>
@@ -623,8 +619,8 @@
                             </div>
                         </section>
             
-                        <section class="playlistList" aria-labelledby="region4">
-                            <div class="playlistList-top">
+                        <section class="playlistList" aria-labelledby="region4"><!--white-->
+                            <div class="playlistList-top"><!--blue flex-->
                                 <h2 class="playlistList-title" id="region4">Tus mixes más escuchados</h2>
                                 <div class="navigation">
                                     <button disabled class="navigation-prev" aria-label="Volver" title="Volver">
@@ -635,7 +631,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="playlistList-container">
+                            <div class="playlistList-container"><!--red flex-->
                     
                                 <div class="playlistA">
                                     <div class="playlistA-cover">
@@ -775,6 +771,820 @@
             
                 </div>
             </div>
+            <div class="layout-foryou" id="layoutForyou" hidden>
+                <div class="banner">
+                    <div class="banner-artist">
+                        <img class="banner-artistImage" src="./images/background-artist.png" alt="Banner de artista">
+                    </div>
+                </div>
+                <div class="page" >
+                    <div class="sticky">
+                        <div class="page-block">
+                            <header class="header" aria-label="Barra superior y menú del usuario">
+                                <div class="navigation">
+                                    <button disabled class="navigation-prev" aria-label="Volver" title="Volver">
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrowRight" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <form class="search" aria-label="Buscar por artitsta, canción o podcast" role="search">
+                                    <i class="icon-search" aria-hidden="true"></i>
+                                    <input type="search" placeholder="Buscar por artitsta, canción o podcast">
+                                </form>
+                            </header>
+                        </div>
+                    </div>
+                    
+                    <main class="page-block"><!--flex column violeta-->
+                        <section class="foryou" aria-labelledby="region5">
+                            <div class="foryou-container">
+                                <div class="foryou-containerIndex">
+                                    <h2 class="foryou-title" id="region5">Especial para ti</h2>
+                                    <div class="foryou-title-details">
+                                        <p class="foryou-name">Lorem ipsum dolor sit</p>
+                                        <p class="foryou-followers">89,456 SEGUIDORES</p>
+                                    </div>
+                                    <button class="button-reproducir is-primary" aria-label="Reproducir lista de reproducción" title="Reproducir lista de reproducción">REPRODUCIR</button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="foryou" aria-label="Filtrar lista de reproducción">
+                            <div class="foryou-container">
+                                <div class="foryou-containerFilter">
+                                    <button class="player-filter" aria-label="Buscar canción" title="Buscar canción">
+                                        <i class="icon-search" aria-hidden="false"></i>
+                                    </button>
+                                    <p>Filtrar</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="foryou" aria-label="Lista de reproducción">
+                            <div class="foryou-container">
+                                <div class="playlistList-table">
+                                    <div class="playlistList-table-header">
+                                        <div class="playlistList-table-headerPlay"></div>
+                                        <div class="playlistList-table-headerLike"></div>
+                                        <div class="playlistList-table-headerTitle">TITULO</div>
+                                        <div class="playlistList-table-headerArtist">ARTISTA</div>
+                                        <div class="playlistList-table-headerAlbun">ÁLBUN</div>
+                                        <div class="playlistList-table-headerCalendar"><i class="icon-calendar"></i></div>
+                                        <div class="playlistList-table-headerClock"><i class="icon-clock"></i></div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+            <div class="layout-recently-heard" id="layoutRecentlyHeard" hidden>
+                <div class="page">
+                    <div class="sticky">
+                        <div class="page-block">
+                            <header class="header" aria-label="Barra superior y menú del usuario">
+                                <div class="navigation">
+                                    <button disabled class="navigation-prev" aria-label="Volver" title="Volver">
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrowRight" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <form class="search" aria-label="Buscar por artitsta, canción o podcast" role="search">
+                                    <i class="icon-search" aria-hidden="true"></i>
+                                    <input type="search" placeholder="Buscar por artitsta, canción o podcast">
+                                </form>
+                            </header>
+                        </div>
+                    </div>
+                    <main class="page-block">
+                        <section class="recently-heard" aria-labelledby="region6">
+                            <div class="recently-heard-container">
+                                <div class="recently-heard-containerIndex">
+                                    <div class="recently-heard-containerIndex-image">
+                                        <img class="recently-heard-image" src="./images/img-1.jpg" width="312" height="183" alt="Imagen principal de los exitos del momento">
+                                    </div>
+                                    <div class="recently-heard-containerIndex-details">
+                                        <h2 class="recently-heard-title" id="region6">Escuchado recientemente</h2>
+                                        <p class="recently-heard-name">Los mejores éxitos escuchados del momento</p>
+                                        <p class="recently-heard-followers">4,456,159 SEGUIDORES</p>
+                                        <button class="button-reproducir is-primary" aria-label="Reproducir lista de reproducción" title="Reproducir lista de reproducción">REPRODUCIR</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                        <section class="recently-heard" aria-label="Filtrar lista de reproducción">
+                            <div class="foryou-container">
+                                <div class="foryou-containerFilter">
+                                    <button class="player-filter" aria-label="Buscar canción" title="Buscar canción">
+                                        <i class="icon-search" aria-hidden="false"></i>
+                                    </button>
+                                    <p>Filtrar</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="recently-heard" aria-label="Lista de reproducción">
+                            <div class="foryou-container">
+                                <div class="playlistList-table">
+                                    <div class="playlistList-table-header">
+                                        <div class="playlistList-table-headerPlay"></div>
+                                        <div class="playlistList-table-headerLike"></div>
+                                        <div class="playlistList-table-headerTitle">TITULO</div>
+                                        <div class="playlistList-table-headerArtist">ARTISTA</div>
+                                        <div class="playlistList-table-headerAlbun">ÁLBUN</div>
+                                        <div class="playlistList-table-headerCalendar"><i class="icon-calendar"></i></div>
+                                        <div class="playlistList-table-headerClock"><i class="icon-clock"></i></div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                    <div class="playlistList-table-row">
+                                        <div class="playlistList-table-cellPlay">
+                                            <button class="player-song" aria-label="Reproducir canción" title="Reproducir canción">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellLike">                                            
+                                            <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca" title="Guardar en tu bibi}lioteca">
+                                                <i class="icon-heart" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="playlistList-table-cellTitle">Grand Escape</div>
+                                        <div class="playlistList-table-cellArtist">RADWIMPS</div>
+                                        <div class="playlistList-table-cellAlbun">Weathering With You</div>
+                                        <div class="playlistList-table-cellCalendar">2021-02-10</div>
+                                        <div class="playlistList-table-cellClock">3:25</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+            <div class="layout-your-likes" id="layoutYourlikes" hidden>
+                <div class="page">
+                    <div class="sticky">
+                        <div class="page-block">
+                            <header class="header" aria-label="Barra superior y menú del usuario">
+                                <div class="navigation">
+                                    <button disabled class="navigation-prev" aria-label="Volver" title="Volver">
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrowRight" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <form class="search" aria-label="Buscar por artitsta, canción o podcast" role="search">
+                                    <i class="icon-search" aria-hidden="true"></i>
+                                    <input type="search" placeholder="Buscar por artitsta, canción o podcast">
+                                </form>
+                            </header>
+                        </div>
+                    </div>
+                    <main class="page-block">
+                        <section class="your-likes" aria-labelledby="region7">
+                            <div class="your-likes-container">
+                                <div class="your-likes-containerTop">
+                                    <div class="your-likes-containerTop-image">
+                                        <img class="your-likes-image" src="https://i.scdn.co/image/ab67706f0000000399c76c85d6441cf2174c6acf" alt="Imagen tus me gusta" width="232" height="232">
+                                    </div>
+                                    <div class="your-likes-containerTop-details">
+                                        <div>
+                                            <p class="your-likes-playlist">playlist</p>
+                                            <h2 id="region7" class="your-likes-title">Karaoke Mexicano</h2>
+                                            <p class="your-likes-name">¡Con las Letras de estas canciones, no querrás soltar el micrófono!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="your-likes" aria-label="Reproducir lista de producción tus me gusta">
+                            <div class="your-likes-container">
+                                <div class="your-likes-containerPlay">
+                                    <button class="buttonIconPlayList is-primary" aria-label="Reproducir tus me gusta" title="Reproducir tus me gusta">
+                                        <i class="icon-play" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="your-likes" aria-label="Tabla lista de reproducción de tus me gusta">
+                            <div class="your-likes-container">
+                                <div class="your-likes-table">
+                                    <div class="your-likes-table-header">
+                                        <div class="your-likes-table-headerNum">#</div>
+                                        <div class="your-likes-table-headerTitle">Titulo</div>
+                                        <div class="your-likes-table-headerAlbun">Albún</div>
+                                        <div class="your-likes-table-headerDate">Agregado el </div>
+                                        <div class="your-likes-table-headerTime">
+                                            <i class="icon-clock"></i>
+                                        </div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">1</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d00004851afb7b8b8aad67c0c4398ffba" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Quiero ver</p>
+                                                <p>Cafe tacvba</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Café relax</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">2</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d00004851ae18ed3e8c0b2f82d0eaf08c" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Love</p>
+                                                <p>Zoe</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Rocanlover</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">3</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d000048513d8681f44a7ce5ad52de85cd" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Lucha de gigantes</p>
+                                                <p>Nacha Pop</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">El momento</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">4</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d000048517fb9b3bb11ea6e9d9625f880" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>La fuerza del destino</p>
+                                                <p>Mecano</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Descanso Dominical</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">5</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d00004851b4ee5db5861f458380021aef" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Me pregunto</p>
+                                                <p>Belanova</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Amor latino</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">6</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d00004851a15f82b63a149c5d8617fe89" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>El triste</p>
+                                                <p>José José</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Jose Jose</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">7</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d00004851bde682ef05dd142729f214d9" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Volcán</p>
+                                                <p>José José</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Volcan</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">8</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d000048515eebf3f8ec6e9807105f3151" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Tu falta de querer</p>
+                                                <p>Mon Laferte</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Mon laferte</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">9</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d000048510aab643232cb0f0a78349929" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>experiencia religiosa</p>
+                                                <p>Enrique Iglesias</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Enrique Iglesias</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">10</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d0000485196eedd4d98b9c89b2f1d3a13" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Lamento Boliviano</p>
+                                                <p>los enanitos verdes</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Antologiía</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">11</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d000048514c43fbcf18d000bd2a33d065" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Por besarte</p>
+                                                <p>LU</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Lu</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">12</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d00004851541f0f3388e4f3072886a362" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Me voy</p>
+                                                <p>Julieta Venegas</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Lo mejor</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">13</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d000048513443d9c76e9713a5986c983c" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>Amiga mia</p>
+                                                <p>Alejandro Sanz</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Más</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>
+                                    <div class="your-likes-table-row">
+                                        <div class="your-likes-table-cellNum">14</div>
+                                        <div class="your-likes-table-cellTitle">
+                                            <div class="your-likes-table-cellTitleAlbun">
+                                                <img src="https://i.scdn.co/image/ab67616d000048518a9b9eea2be0f390fe002bea" class="your-likes-imageAlbun" alt="Portada de albún fulanito de tal" width="40" height="40">
+                                            </div>
+                                            <div class="your-likes-table-cellDetails">
+                                                <p>es mejor así</p>
+                                                <p>Cristian Castro</p>
+                                            </div>
+                                        </div>
+                                        <div class="your-likes-table-cellAlbun">Un segundo en el tiempo</div>
+                                        <div class="your-likes-table-cellDate">3 de marzo 2020</div>
+                                        <div class="your-likes-table-cellTime">3:25</div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
         </div>
         <div class="layout-block">
             <footer class="layout-bottom">
@@ -832,7 +1642,7 @@
                     </div>
                     <div class="player-playerVolume">
                         <div class="playerVolume">
-                            <button class="player-control" aria-label="Silenciar" aria-describedby="volumen-icon">
+                            <button class="player-control" aria-label="Silenciar" aria-pressed="false" aria-describedby="volume-icon">
                                 <i class="icon-volumeUp" id="volumen-icon" role="presentation" aria-label="Volumen alto"></i>
                             </button>
                             <div class="playerVolume-slider">
@@ -847,7 +1657,7 @@
                 </div>
             </footer>
         </div>
-        
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>
