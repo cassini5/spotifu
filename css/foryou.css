@@ -1,0 +1,46 @@
+.foryou {
+    /* border: 1px solid blue;     */
+}
+
+.foryou-container {    
+    /* display: flex;
+    flex-direction: column; */
+    /* background: pink; */
+}
+
+.foryou-title {
+    margin-block-end: 1rem;
+    margin-block-start: 5.375rem;
+    font: var(--headline1);
+    color: var(--white);
+}
+
+.foryou-title-details {
+    margin-block-end: 1rem;
+}
+
+.foryou-name, .foryou-followers {
+    font: var(--basefontFamily);
+    color: var(--white);
+    margin: 0;
+}
+
+.foryou-containerFilter {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-inline: .5rem;
+    padding-block: .5rem;    
+}
+
+.foryou-containerIndex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-block-end: 1rem;
+}
+
+.foryou-containerFilter p {
+    margin: 0;
+}

@@ -2,13 +2,14 @@
 @import './playlist-b.css';
 
 .playlistList {
-    
+    /* border: 3px solid white; */
 }
 
 .playlistList-container {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
+    /* border: 1px solid red; */
 }
 
 .playlistList-container > * {
@@ -29,4 +30,66 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    /* border: 1px solid rgb(23, 240, 255); */
+}
+
+.playlistList-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlistList-table-header {
+    display: flex;
+    color: var(--gray10);    
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.playlistList-table-header > div {
+    padding-inline: .625rem;
+    padding-block: .625rem;
+
+}
+
+.playlistList-table-row {
+    display: flex;
+    color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playlistList-table-row > div {
+    padding-inline: .625rem;
+    padding-block: .625rem;    
+}
+
+.playlistList-table-headerTitle, .playlistList-table-cellTitle {
+    min-inline-size: 20rem;    
+}
+
+.playlistList-table-headerArtist, .playlistList-table-cellArtist,
+.playlistList-table-headerAlbun, .playlistList-table-cellAlbun {
+    min-inline-size: 17rem;
+}
+
+.playlistList-table-headerCalendar, .playlistList-table-cellCalendar {
+    min-inline-size: 5.625rem;
+    justify-content: center;
+    color: var(--gray10);
+}
+
+.playlistList-table-headerClock, .playlistList-table-cellClock {
+    min-inline-size: 3rem;
+    justify-content: center;
+    color: var(--gray10);
+}
+
+.playlistList-table-headerPlay, .playlistList-table-headerLike,
+.playlistList-table-cellPlay, .playlistList-table-cellLike {
+    min-inline-size: 2.75rem;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }

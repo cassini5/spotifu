@@ -1,0 +1,17 @@
+.button-reproducir {
+    border: 0;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    border-radius: 4.375rem;    
+    cursor: pointer;
+    font: var(--button);
+}
+
+.button-reproducir.is-primary {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.button-reproducir:active {
+    transform: scale(.95);
+}

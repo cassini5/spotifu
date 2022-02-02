@@ -1,0 +1,13 @@
+.banner {
+
+}
+
+.banner-artist {
+    position: relative;
+}
+
+.banner-artistImage {
+    position: fixed;
+    z-index: -2;
+    inline-size: 100%;
+}

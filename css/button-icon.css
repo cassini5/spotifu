@@ -1,6 +1,14 @@
 .buttonIcon {
     inline-size: 2.5rem;
     block-size: 2.5rem;
+}
+
+.buttonIconPlayList {
+    inline-size: 3.5rem;
+    block-size: 3.5rem;
+}
+
+.buttonIcon, .buttonIconPlayList {
     background: transparent;
     border-radius: 50%;
     border: 0;
@@ -8,7 +16,7 @@
     color: var(--gray10);
 }
 
-.buttonIcon.is-primary {
+.buttonIcon.is-primary, .buttonIconPlayList {
     background-color: var(--primary);
     color: var(--white);
 }
@@ -18,12 +26,16 @@
     color: var(--gray50);
 }
 
-.buttonIcon .icon-play {
+.buttonIconPlayList {    
+    font-size: 1rem;
+}
+
+.buttonIcon .icon-play,  .buttonIconPlayList .icon-play {
     position: relative;
     inset-inline-start: 1px;
     inset-block-start: 1px;
 }
-.buttonIcon:active {
+.buttonIcon:active, .buttonIconPlayList:active {
     transform: scale(.95);
 }
 .buttonIcon:hover:is([class*='is-']) {

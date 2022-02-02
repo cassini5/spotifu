@@ -1,0 +1,42 @@
+.recently-heard {
+    /* background: red; */
+}
+
+.recently-heard-container {
+    margin-block-start: 1.5rem;
+    margin-block-end: 1rem;
+}
+
+.recently-heard-containerIndex {
+    display: flex;
+    gap: 1.5rem;
+}
+.recently-heard-image {
+    
+}
+.recently-heard-name, .recently-heard-followers {
+    font: var(--basefontFamily);
+    color: var(--white);    
+}
+
+.recently-heard-name {
+    margin: 0;
+}
+
+.recently-heard-followers  {    
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+}
+
+.recently-heard-title {
+    font: var(--headline1);
+    color: var(--white);
+    margin-block-start: 0;
+    margin-block-end: 1rem;
+}
+
+.recently-heard-image {
+    inline-size: 19.5rem;
+    block-size: 11.5rem;
+    vertical-align: middle;
+}

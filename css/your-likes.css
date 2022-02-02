@@ -1,0 +1,108 @@
+.your-likes-container {
+
+}
+
+.your-likes-containerTop {
+    margin-block-start: 1.5rem;
+    display: flex;
+    gap: .625rem;
+}
+
+.your-likes-title {
+    font: var(--headline1);
+    color: var(--white);
+    margin-block: .5rem;
+}
+
+.your-likes-containerPlay {
+    padding-block-start: 1.5rem;
+    padding-block-end: 1rem;
+}
+
+.your-likes-playlist, .your-likes-name {
+    text-transform: uppercase;
+    font: var(--small);
+    color: var(--white);
+    margin: 0;
+}
+
+.your-likes-containerTop-details {
+    display: flex;
+    align-items: flex-end;
+}
+
+.your-likes-image {
+    vertical-align: middle;
+    inline-size: 14.5rem;
+    aspect-ratio: 1/1;
+}
+
+.your-likes-table {
+    font: var(--small);
+    color: var(--white);
+}
+
+.your-likes-table-header, .your-likes-table-row {    
+    display:flex;
+    justify-content: space-between;
+    padding-block: .5rem;
+    padding-inline: .625rem;
+    align-items: center;
+    gap: .5rem;
+}
+
+.your-likes-table-header {
+    border-block-end: 1px solid var(--gray10);
+}
+
+.your-likes-table-header > div, .your-likes-table-row > div {    
+}
+
+.your-likes-table-headerNum, .your-likes-table-cellNum {
+    inline-size: 2rem;
+    text-align: center;
+}
+
+.your-likes-table-headerTitle, .your-likes-table-cellTitle {
+    min-inline-size: 14.375rem;
+}
+
+.your-likes-table-cellTitle {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.your-likes-table-cellDetails > p {
+    margin: 0;    
+}
+
+.your-likes-table-cellDetails > p:last-child {
+    color: var(--gray10);
+}
+
+.your-likes-imageAlbun {
+    vertical-align: middle;
+    inline-size: 2.5rem;
+    aspect-ratio: 1/1;
+}
+
+.your-likes-table-headerDate {
+    text-transform: uppercase;
+}
+
+.your-likes-table-headerAlbun, .your-likes-table-headerDate, .your-likes-table-cellAlbun, .your-likes-table-cellDate {
+    min-inline-size: 21.75rem;
+}
+
+.your-likes-table-headerTime, .your-likes-table-cellTime {
+    min-inline-size: 5rem;
+    text-align: center;    
+}
+
+.your-likes-table-headerTime {
+    min-inline-size: 5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--gray10);
+}
