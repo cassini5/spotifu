@@ -35,9 +35,19 @@
     inset-inline-start: 1px;
     inset-block-start: 1px;
 }
+
 .buttonIcon:active, .buttonIconPlayList:active {
     transform: scale(.95);
 }
+
 .buttonIcon:hover:is([class*='is-']) {
     box-shadow: 0 8px 8px rgba(0,0,0,.3);
+}
+
+.buttonUserOptions {
+    border: none;
+    cursor: pointer;    
+    color: var(--white);
+    background: transparent;
+    padding: 0;
 }

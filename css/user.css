@@ -1,0 +1,27 @@
+.user {
+    /* background: red; */
+}
+
+.user-options {
+    display: flex;
+    font: var(--baseFont);
+    align-items: center;
+    /* background: var(--gray30); */
+    background: rgba(0, 0, 0, .5);
+    gap: .25rem;
+    inline-size: 11.25rem;
+    block-size: 2rem;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.user-avatar {
+    vertical-align: middle;
+    border-radius: 50%;
+    inline-size: 1.75rem;
+    aspect-ratio: 1/1;
+}
+
+.buttonUserOptions .icon-vector {
+    font-size: .625rem;
+}
